@@ -1,0 +1,38 @@
+{
+  "name": "custom-clock-card",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "rollup -c --watch",
+    "build": "pnpm typecheck && rollup -c",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --fix",
+    "lint:check": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "style": "pnpm lint; pnpm format"
+  },
+  "dependencies": {
+    "custom-card-helpers": "2.0.0",
+    "lit": "^3.3.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "esbuild": "^0.25.0",
+    "eslint": "^10.7.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-lit": "^2.3.1",
+    "eslint-plugin-perfectionist": "^5.10.0",
+    "globals": "^17.7.0",
+    "prettier": "^3.9.5",
+    "rollup": "^4.20.0",
+    "rollup-plugin-esbuild": "^6.2.1",
+    "rollup-plugin-serve": "^1.1.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.64.0"
+  },
+  "packageManager": "pnpm@11.5.0"
+}
