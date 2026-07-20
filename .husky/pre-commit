@@ -1,0 +1,2 @@
+pnpm build
+git add dist/custom-clock-card.js

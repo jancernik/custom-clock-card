@@ -5,6 +5,7 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
+    "prepare": "husky",
     "dev": "rollup -c --watch",
     "build": "pnpm typecheck && rollup -c",
     "typecheck": "tsc --noEmit",
@@ -28,6 +29,7 @@
     "eslint-plugin-lit": "^2.3.1",
     "eslint-plugin-perfectionist": "^5.10.0",
     "globals": "^17.7.0",
+    "husky": "^9.1.7",
     "prettier": "^3.9.5",
     "rollup": "^4.20.0",
     "rollup-plugin-esbuild": "^6.2.1",
