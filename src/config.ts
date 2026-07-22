@@ -4,10 +4,10 @@ import type {
   NormalizedCustomClockCardConfig
 } from "./types"
 
-export const DEFAULT_COLORS = ["#ffffff", "#ffffff", "#ffffff", "#ffffff"] as const
+export const DEFAULT_COLORS = ["#fff", "#fff", "#fff", "#fff"] as const
 
 export const DEFAULT_CONFIG = {
-  color: "#ffffff",
+  color: "#fff",
   colors: [...DEFAULT_COLORS],
   font_family: "",
   font_url: "",
@@ -21,7 +21,7 @@ export const DEFAULT_CONFIG = {
   padding: 0,
   scale: 1,
   separator: ":",
-  separator_color: "#ffffff",
+  separator_color: "#fff",
   separator_offset: 0,
   separator_spacing: 0,
   show_separator: true,
