@@ -1,0 +1,40 @@
+[changelog]
+header = "## Changelog\n"
+body = """
+{%- for name in ["Features", "Bug fixes", "Performance", "Other changes"] -%}
+{%- set group_commits = commits | filter(attribute="group", value=name) -%}
+{%- if group_commits | length > 0 %}
+### {{ name }}
+{% for commit in group_commits -%}
+* {{ commit.id }} {{ commit.raw_message }}
+{% endfor -%}
+{% endif -%}
+{%- endfor %}
+{% if previous and previous.version -%}
+**Full Changelog**: https://github.com/jancernik/custom-clock-card/compare/{{ previous.version }}...{{ version }}
+{% endif -%}
+"""
+trim = true
+postprocessors = [
+  { pattern = '\n{2,}', replace = "\n" },
+]
+
+[git]
+conventional_commits = true
+filter_unconventional = true
+commit_parsers = [
+  { message = "^feat", group = "Features" },
+  { message = "^fix", group = "Bug fixes" },
+  { message = "^perf", group = "Performance" },
+  { message = "^docs", skip = true },
+  { message = "^test", skip = true },
+  { message = "^ci", skip = true },
+  { message = "^build", skip = true },
+  { message = "^chore", skip = true },
+  { message = "^refactor", skip = true },
+  { message = "^Merge", skip = true },
+  { message = "^Revert", skip = true },
+  { message = ".*", group = "Other changes" },
+]
+filter_commits = true
+sort_commits = "oldest"
