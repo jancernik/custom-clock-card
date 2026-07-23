@@ -1,2 +1,4 @@
+pnpm format:check
+pnpm lint:check
 pnpm build
 git add dist/custom-clock-card.js
