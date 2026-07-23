@@ -26,7 +26,7 @@ import {
   normalizeTimeFormat
 } from "./config"
 
-const CARD_VERSION = "0.0.1"
+const CARD_VERSION = "0.1.0"
 
 const CUSTOM_FONT_NAME = "Custom Clock Font" // Used for fonts loaded from font_url when no font_family is set.
 
